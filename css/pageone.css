@@ -1,0 +1,149 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(63,80,113);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    font: 18px Arial, Tahoma, Helvetica, sans-serif;
+    color:rgb(214, 208, 149);
+}    
+/* 导航样式 */
+.box{
+    width:500px;
+    height:40px;
+    margin:auto;
+}
+.input{
+    float:left;
+    width:400px;
+    height:38px;
+    outline:none;
+    border:none;
+}
+.button{
+	float:left;
+	width:96px;
+	height:40px;
+	color:white;
+	background-color:rgba(45, 144, 101, 0.603);
+	border:none;
+	outline:none;
+}
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    font-weight: bold;
+    width: 128px;
+    list-style: none;
+    text-align:center;
+}
+.navbar ul li a {
+    width: 128px;
+    line-height: 45px;
+    font-size: 1.7rem;
+    color: white;
+}
+.navbar ul li a:hover{
+    color: #009933;
+}
+/* 二级菜单样式 */
+.navbar ul li ul{
+    position: absolute;
+    display: none;
+    width: 128px;
+    line-height: 45px;
+}
+
+.navbar ul li ul li{
+    background-color: #3F3D56;
+}
+/* 悬浮展开二级菜单 */
+.navbar ul li ul li a:hover{
+    color: white;
+}
+.navbar ul li ul li:hover{
+    background-color: #009933;
+}
+
+.navbar ul li:hover ul{
+    display: block;
+}
+img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 0;
+    outline: 0;
+    vertical-align: middle;
+}
+
+.beijing{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../potos/12.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.left{
+    padding-top: 20px;
+    width: 350px;
+    height: 320px;
+    border: 2px solid rgba(245, 222, 179, 0.604);
+    border-radius: 6%;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    z-index: -6;
+    background-color: rgba(104, 197, 157, 0.577);
+    font-size: 14px;
+    text-indent: 2em;
+}
+.center{
+    width: 300px;
+    height: 320px;
+    border: 2px solid rgba(245, 222, 179, 0.604);
+    border-radius: 6%;
+    position: absolute;
+    left: 400px;
+    top: 60px;
+    background-color: rgba(104, 197, 157, 0.577);
+    /* text-decoration: underline; */
+    /* text-indent: 2em; */
+    background-image: url(../potos/8.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 36px;
+    color: aliceblue;
+    text-align: center;
+}

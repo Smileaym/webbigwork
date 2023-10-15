@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YI XIANG QING</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript">
+        // window.alert("1111")
+        window.onload=function(){
+			    //获取div
+    var oBackTop = document.getElementById("backTop")
+    			//保存可视窗口的高度
+    var iWindowLength = document.documentElement.clientHeight 
+				//保存定时器
+    var timer = null
+    			//元素滚动事件
+    document.onscroll = function() {
+    			//滚动时，获取滚轮滚动的距离
+        var iRollingLength = document.documentElement.scrollTop
+        		//判断滚动距离是否大于窗口高度，是则显现div
+        if(iRollingLength>iWindowLength){
+            oBackTop.style.display="block"
+        }else{
+            oBackTop.style.display="none"
+        }
+        		//滚动距离到0时，即已经回到顶部，则关闭定时器
+        if(iRollingLength == 0){
+            clearInterval(timer)
+        } 
+    }
+    			//没有回到顶部之前，若用户触发了滚轮事件，关闭定时器
+    document.onwheel=function(){
+        clearInterval(timer)
+    }
+    			//点击div时，触发定时器，使滚动距离缓速减小
+    oBackTop.onclick=function(){
+      timer = setInterval(function(){
+        document.documentElement.scrollTop = document.documentElement.scrollTop/1.07
+     },10)
+    }
+}
+    </script>
+
+    </script>
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="./potos/1.jpg" alt="">
+        <span>美丽凉山，彝乡彝情</span>
+        <div class="box">
+            <input type="text" class="input" placeholder="请输入">
+            <input type="button" value="搜索" class="button">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="./pageone.html" >服饰</a></li>
+                <li><a href="#">文化习俗</a>
+                    <ul class="hide">
+                        <li><a href="./pagetwo.html">文化</a></li>
+                        <li><a href="./pagethree.html">习俗</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="main">
+        <video  autoplay loop muted> 
+            <source src="./potos/1.mp4" type="video/mp4"></source>
+        </video>
+        <div class="partone">
+            <p>不要听说凉山，而是听凉山说</p>
+            <p><span style="font-weight: 900px;font-size: 36px;color: white;">ꋬꂻꈨꅪ</span>(译:吉祥如意)</p>
+        </div>
+    </div>
+    <div class="parttwo">
+        <div class="parthree">
+            <p>琼海的日落</p>
+        </div>
+        <div class="partfour">
+            <p>蓝花楹</p>
+        </div>
+    </div>
+    <button class="toTop" id="backTop">回到顶部</button>
+    <div class="footer">
+        <p>非遗计划</p>
+        <p>材料来源:百度，哔哩哔哩</p>
+        <p>图片来源:凉山奴隶博物馆</p>
+    </div>
+</body>
+</html>
